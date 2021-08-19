@@ -12,7 +12,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: windows-latest
-    default:
+    defaults:
       run:
         working-directory: "./frontend"
 
