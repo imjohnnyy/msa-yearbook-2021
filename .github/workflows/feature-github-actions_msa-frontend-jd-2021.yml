@@ -6,11 +6,15 @@ name: Azure App Service - msa-frontend-jd-2021(Production), Build and deploy Nod
 on:
   push:
     branches:
-      - feature/github-actions
+      - main
+      - feature/*
 
 jobs:
   build-and-deploy:
     runs-on: windows-latest
+    default:
+      run:
+        working-directory: "./frontend"
 
     steps:
     # checkout the repo
@@ -35,5 +39,5 @@ jobs:
         app-name: msa-frontend-jd-2021
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_64DC1B01E9394AA7B4B179EBF1828787 }}
-        package: .
+        package: "./frontend/build"
 
