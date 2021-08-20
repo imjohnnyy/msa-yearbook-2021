@@ -1,9 +1,8 @@
 import React from "react";
-
 import { createStyles, Grid, makeStyles, Theme } from "@material-ui/core";
 import { SocialIcon, SocialIconProps } from "../SocialIcon/SocialIcon";
 import { SOCIAL_MEDIA } from "../../Assets/resourses";
-import microsoftLogo from "../../Assets/Logos/microsoft_logo.svg";
+import  microsoftLogo from "../../Assets/Logos/microsoft_logo.svg";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
