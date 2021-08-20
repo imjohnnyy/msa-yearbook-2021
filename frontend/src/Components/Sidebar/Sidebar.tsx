@@ -30,28 +30,22 @@ export const Sidebar = () => {
   return (
     <div className={classes.list}>
       <List>
-        <ListItem button>
-          <ListItemIcon>
-            <HomeIcon />
-          </ListItemIcon>
-          <ListItemText className={classes.listText} primary="Home" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <ArrowUpwardIcon />
-          </ListItemIcon>
-          <ListItemText className={classes.listText} primary="Submit" />
-        </ListItem>
-      </List>
-      <Divider />
-      <List>
-        <ListItem button>
-          <ListItemIcon>
-            <AddBoxIcon />
-          </ListItemIcon>
-          <ListItemText className={classes.listText} primary="Login" />
-        </ListItem>
-      </List>
+                <ListItem button href="/home" component={Link}>
+                    <ListItemIcon><HomeIcon /></ListItemIcon>
+                    <ListItemText className={classes.listText} primary="Home" />
+                </ListItem>
+                <ListItem button href="/submit" component={Link}>
+                    <ListItemIcon><ArrowUpwardIcon /></ListItemIcon>
+                    <ListItemText className={classes.listText} primary="Submit" />
+                </ListItem>
+            </List>
+            <Divider />
+            <List>
+                <ListItem button href="/login" component={Link}>
+                    <ListItemIcon><AddBoxIcon /></ListItemIcon>
+                    <ListItemText className={classes.listText} primary="Login" />
+                </ListItem>
+            </List>
     </div>
   );
 };
